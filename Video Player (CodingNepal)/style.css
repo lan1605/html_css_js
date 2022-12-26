@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    min-height: 100vh;
+    background-color: #e3f2fd;
+}
+body , .video-timer , .video-controls, .options
+{
+    display: flex;
+align-items: center;
+justify-content: center;
+}
+.container{
+    max-width: 900px;
+    width: 98%;
+    background-color: black;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.full-screen{
+    max-width: 100% !important;
+    width: 100% !important;
+}
+.wrapper{
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    bottom: 0;
+}
+.wrapper::before{
+    content: "";
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    background:linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    height:  calc(100% + 35px);
+}
+.video-timeline{
+    height: 7px;
+    width: 100%;
+    cursor: pointer;
+}
+.progress-area{
+    height: 3px;
+    background: rgba(255, 255, 255, 0.6);
+    position: relative;
+}
+.progress-area span{
+    position: absolute;
+    left: 50%;
+    color: white;
+    top: -25px;
+    font-size: 13px;
+    transform: translateX(-50%);
+}
+.progress-area span ,.progress-bar:before{
+    display: none;
+}      
+.video-timeline:hover .progress-area span ,.video-timeline:hover .progress-bar:before{
+    display: block;
+}      
+.progress-bar{
+    position: relative;
+    width: 0;
+    background: #2289ff;
+    height: 100%;
+}
+.progress-bar:before{
+    position: absolute;
+    content: "";
+    right: 0;
+    height: 13px;
+    width: 13px;
+    background: inherit;
+    top:50%;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+.video-controls{
+    padding: 5px 20px 10px;
+}
+.video-controls .options{
+    width: 100%;
+}
+.options button{
+    width: 40px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    background: none;
+    font-size: 19px;
+    border:none;
+}
+.options:first-child{
+    justify-content: flex-start;
+}
+.options:last-child{
+    justify-content: flex-end;
+}
+.options button :where(i, span){
+    width: 100%;
+    line-height: 40px;
+    height: 100%;
+}
+.options input{
+    height: 4px;
+    max-width: 75px;
+}
+.options video-timer{
+    font-size: 14px;
+    color: #efefef;
+    margin-left: 15px;
+}
+.video-timer .separator{
+    font-size: 16px;
+    margin: 0 5px;
+    font-family: "Open sana";
+}
+.playback-content{
+    position: relative;
+
+}
+.speed-options{
+    position: absolute;
+    background: white ;
+    bottom: 40px;
+    left: -40px;
+    list-style: none;
+    pointer-events: none;
+    opacity: 0;
+    width: 95px;
+    border-radius: 4px;
+    transition: opacity .13s ease;
+}
+.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+.video-timer{
+    color: white;
+    margin-left: 5px;
+}
+#range{
+    accent-color: #2289ff;
+}
+.speed-options li{
+    font-size: 14px;
+    cursor: pointer;
+    padding: 5px 0 5px 15px;
+}
+.active{
+    background: #2289ff;
+    color: white;
+
+}
+video{
+    cursor: pointer;
+    width: 100%;
+}

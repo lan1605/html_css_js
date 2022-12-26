@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #927dfc;
+}
+.wrapper{
+    width: 450px;
+    padding: 30px;
+    background: white;
+    border-radius: 9px;
+}
+.wrapper .upload-box{
+    height: 225px;
+    border: 2px dashed #afafaf;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-direction: column;
+}
+.upload-box p{
+    font-size: 1.06rem;
+    margin-top: 20px;
+}
+.content{
+    margin-top: 28px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    /* gap: 10px; */
+}
+.row .column{
+    width: calc(100% / 2 - 15px);
+}
+.column label{
+    font-size: 1.06rem;
+}
+.sizes .column input{
+    width: 100%;
+    height: 49px;
+    border: 1px solid #aaa;
+    outline: none;
+    border-radius: 4px;
+    padding: 15px;
+    font-size: 1.06rem;
+    margin-top: 7px;
+}
+.sizes .column input:focus{
+    padding: 0 14px;
+    border: 2px solid #927dfc;
+}
+.content .checkboxes{
+    margin-top: 20px;
+}
+.checkboxes .column input{
+    width: 17px;
+    height: 17px;
+    margin-right: 9px;
+    accent-color: #927dfc;
+}
+.checkboxes .column{
+    display: flex;
+    align-items: center;
+}
+.content .download-btn{
+    width: 100%;
+    padding: 15px 0;
+    margin: 30px 0 10px;
+    color: white;
+    outline: none;
+    border: none;
+    background: #927dfc;
+    cursor: pointer;
+    font-size: 1.06rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+/*  */
